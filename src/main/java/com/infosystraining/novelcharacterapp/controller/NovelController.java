@@ -2,6 +2,7 @@ package com.infosystraining.novelcharacterapp.controller;
 
 import com.infosystraining.novelcharacterapp.model.Novel;
 import com.infosystraining.novelcharacterapp.service.NovelService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.Optional;
 public class NovelController {
     private NovelService novelService;
 
+    @Autowired
     public NovelController(NovelService novelService) {
         this.novelService = novelService;
     }
@@ -34,7 +36,7 @@ public class NovelController {
 
     @PostMapping("/add")
     public ResponseEntity<Novel> addNovel(@RequestBody Novel novel) {
-        Novel newNovel = novelService.addNovel(novel);
+        Novel newNovel = novelService.addNewNovel(novel);
         return new ResponseEntity<>(newNovel, HttpStatus.CREATED);
     }
 
