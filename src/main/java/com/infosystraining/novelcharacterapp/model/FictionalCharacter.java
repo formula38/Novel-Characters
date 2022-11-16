@@ -22,4 +22,8 @@ public class FictionalCharacter {
     private Gender gender;
     @Enumerated(EnumType.STRING)
     private CharacterRole role;
+
+    @ManyToOne
+    @JoinColumn(name = "novel_id")
+    private Novel novel;
 }

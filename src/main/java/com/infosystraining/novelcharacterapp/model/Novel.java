@@ -22,6 +22,7 @@ public class Novel {
     private String title;
     private String author;
 
-    @OneToMany(mappedBy = "name")
+    @OneToMany(mappedBy = "id")
+
     private List<FictionalCharacter> character = new ArrayList<>();
 }
