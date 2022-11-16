@@ -13,6 +13,7 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/api/v1/characters")
 public class FictionalCharacterController {
+
     private FictionalCharacterService fictionalCharacterService;
 
     @Autowired
