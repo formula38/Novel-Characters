@@ -22,7 +22,7 @@ public class NovelController {
         this.novelService = novelService;
     }
 
-    @GetMapping("/all")
+    @GetMapping
     public ResponseEntity<List<Novel>> getNovels() {
         List<Novel> novels = novelService.findAllNovels();
         return new ResponseEntity<>(novels, HttpStatus.OK);
