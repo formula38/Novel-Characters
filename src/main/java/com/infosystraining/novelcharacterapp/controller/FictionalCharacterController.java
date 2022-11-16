@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/api/v1/characters")
-public class FIctionalCharacterController {
+public class FictionalCharacterController {
     private FictionalCharacterService fictionalCharacterService;
 
-    public FIctionalCharacterController(FictionalCharacterService fictionalCharacterService) {
+    public FictionalCharacterController(FictionalCharacterService fictionalCharacterService) {
         this.fictionalCharacterService = fictionalCharacterService;
     }
+
+
 }
