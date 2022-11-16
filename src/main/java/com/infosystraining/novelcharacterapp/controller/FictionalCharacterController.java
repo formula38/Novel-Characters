@@ -21,7 +21,7 @@ public class FictionalCharacterController {
         this.fictionalCharacterService = fictionalCharacterService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<FictionalCharacter>> getCharacters() {
         List<FictionalCharacter> characters = fictionalCharacterService.findAllCharacters();
         return new ResponseEntity<>(characters, HttpStatus.OK);
