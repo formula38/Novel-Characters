@@ -1,13 +1,20 @@
 package com.infosystraining.novelcharacterapp.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.type.CharacterType;
 
-import javax.persistence.CascadeType;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "FICTIONAL_CHARACTER")
 public class FictionalCharacter {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String age;
@@ -15,6 +22,4 @@ public class FictionalCharacter {
     private Gender gender;
     @Enumerated(EnumType.STRING)
     private CharacterRole role;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Novel novel;
 }
