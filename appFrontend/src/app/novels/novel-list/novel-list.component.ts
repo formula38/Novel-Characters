@@ -20,7 +20,12 @@ export class NovelListComponent implements OnInit {
   }
 
   onGetNovels() {
-    this.novelService.getNovels();
+    this.novelService.getNovels()
+      .subscribe(
+        (novels: Novel[]) => {
+          this.novels = novels;
+        }
+      );
   }
 
   onNewNovel() {

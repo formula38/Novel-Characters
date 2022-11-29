@@ -27,7 +27,7 @@ export class NovelService {
       .post<Novel>(`${this.apiServerUrl}/v1/novels/add`, newNovel);
   }
 
-  public updateNavel(novel: Novel): Observable<Novel> {
+  public updateNovel(novel: Novel): Observable<Novel> {
     return this.http
       .put<Novel>(`${this.apiServerUrl}/v1/novels/update`, novel);
   }

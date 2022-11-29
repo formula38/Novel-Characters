@@ -43,7 +43,11 @@ export class NovelEditComponent implements OnInit {
 
   onSubmit() {
     if (this.editMode) {
-      this.novelService.updateNavel(this.novelForm.value);
+      // let myObj = {
+      //     "attr1": this.novelForm.value,
+      //     "attr2": "other form value"
+      // };
+      this.novelService.updateNovel(this.novelForm.value);
     } else {
       this.novelService.addNovel(this.novelForm.value);
     }
