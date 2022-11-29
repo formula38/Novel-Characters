@@ -1,4 +1,4 @@
-export interface CharacterModel {
+export interface Character {
   id: number;
   name: string;
   age: string;
