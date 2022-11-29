@@ -21,6 +21,7 @@ public class Novel {
     @NotNull
     private String title;
     private String author;
+    private String imageUrl;
 
     @OneToMany(mappedBy = "id")
 

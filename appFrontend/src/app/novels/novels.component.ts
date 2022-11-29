@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Novel} from "../zshared/models/novel.model";
+import {NovelService} from "../zshared/services/novel.service";
 
 @Component({
   selector: 'app-novels',
@@ -11,5 +13,6 @@ export class NovelsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

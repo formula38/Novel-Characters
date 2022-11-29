@@ -8,13 +8,19 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { HeaderComponent } from './header/header.component';
 import {AppRoutingModule} from "./app-Routing.module";
+import {NovelListComponent} from "./novels/novel-list/novel-list.component";
+import {NovelListItemComponent} from "./novels/novel-list/novel-list-item/novel-list-item.component";
+import {NovelEditComponent} from "./novels/novel-edit/novel-edit.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NovelsComponent,
     CharactersComponent,
-    HeaderComponent
+    HeaderComponent,
+    NovelListComponent,
+    NovelListItemComponent,
+    NovelEditComponent
   ],
   imports: [
     BrowserModule,

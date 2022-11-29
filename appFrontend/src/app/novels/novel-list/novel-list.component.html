@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-novel-list-item
+    *ngFor="let novel of novels; let i = index"
+    [novel]="novel"
+    [index]="i"
+    ></app-novel-list-item>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <button
+    type="button"
+    class="btn btn-primary"
+    (click)="onNewNovel()"
+    >Add Novel</button>
+  </div>
+</div>
