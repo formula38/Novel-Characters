@@ -34,6 +34,6 @@ export class NovelService {
 
   public deleteNovel(novelId: number): Observable<void> {
     return this.http
-      .delete<void>(`${this.apiServerUrl}/delete${novelId}`);
+      .delete<void>(`${this.apiServerUrl}/v1/novels/delete${novelId}`);
   }
 }
