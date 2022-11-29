@@ -12,7 +12,8 @@ export class NovelListComponent implements OnInit {
   novels: Novel[];
 
   constructor(private novelService: NovelService,
-              private router: Router) { }
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.onGetNovels();
@@ -23,6 +24,10 @@ export class NovelListComponent implements OnInit {
   }
 
   onNewNovel() {
+    this.router.navigate(
+      ['new'],
+      {relativeTo: this.route}
+    )
   }
 
 }
