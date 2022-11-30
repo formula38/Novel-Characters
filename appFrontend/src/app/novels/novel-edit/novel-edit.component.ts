@@ -55,7 +55,7 @@ export class NovelEditComponent implements OnInit {
     // } else {
     //   this.novelService.addNovel(this.novelForm.value);
     // }
-    this.onCancel();
+    // this.onCancel();
   }
 
   onCancel() {
