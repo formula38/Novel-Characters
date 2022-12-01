@@ -23,6 +23,7 @@ export class NovelService {
   }
 
   public addNovel(newNovel: Novel): Observable<Novel> {
+    console.log(newNovel);
     return this.http
       .post<Novel>(`${this.apiServerUrl}/v1/novels/add`, newNovel);
   }

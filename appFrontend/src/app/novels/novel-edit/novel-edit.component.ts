@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, NgForm} from "@angular/forms";
 import {NovelService} from "../../zshared/services/novel.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Novel} from "../../zshared/models/novel.model";
@@ -42,20 +42,15 @@ export class NovelEditComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    this.novelService.addNovel(this.novelForm.value);
-    console.log(this.novelForm.value);
-    // if (this.editMode) {
-    //   // let myObj = {
-    //   //     "attr1": this.novelForm.value,
-    //   //     "attr2": "other form value"
-    //   // };
-    //
-    //   this.novelService.updateNovel(this.novelForm.value);
-    // } else {
-    //   this.novelService.addNovel(this.novelForm.value);
-    // }
-    // this.onCancel();
+  onSubmit(){
+    this.novelService.addNovel(this.novelForm.value)
+      .subscribe(
+        (newNovel) => {
+          console.log(newNovel)
+        }
+      );
+
+    this.onCancel();
   }
 
   onCancel() {
